@@ -1,0 +1,17 @@
+:root /*make variables*/
+{
+    /*color pallete*/
+  --light: #d6b9ed;
+  --mainColor: #9d53b3;
+  --dark: #4d2464;
+  --darkGreen: #3d4f0d;
+  --lightGreen: #7fad47;
+  --greyish: #cec0d5;
+
+}
+
+
+.header h1
+{
+    color: var(--dark);
+}
