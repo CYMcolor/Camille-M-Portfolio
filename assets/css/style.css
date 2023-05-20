@@ -2,16 +2,57 @@
 {
     /*color pallete*/
   --light: #d6b9ed;
-  --mainColor: #9d53b3;
-  --dark: #4d2464;
+  --mainColor: #b66bcd;
+  --dark: #2c123c;
   --darkGreen: #3d4f0d;
   --lightGreen: #7fad47;
   --greyish: #cec0d5;
 
 }
 
-
-.header h1
+*
 {
-    color: var(--dark);
+  color: var(--dark);
+}
+
+
+.header
+{
+  background-image: linear-gradient(var(--mainColor),var(--light), var(--mainColor));
+  padding: 40px;
+  display: inline-flex;
+  width: 100%;
+
+}
+
+.header h1:after /*The owl mascot*/
+{
+  content: "";
+  background-image: url("../images/owl-mascot.png");
+  background-size: 90px;
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top:  -33px; 
+  
+}
+
+
+body
+{
+  background-image: linear-gradient(var(--light) 10%,var(--greyish) , var(--light) 90%);
+}
+
+body > *
+{
+  padding: 40px;
+  line-height: 1.5;
+}
+
+.about
+{
+  padding: 40px;
+  line-height: 1.5;
 }
