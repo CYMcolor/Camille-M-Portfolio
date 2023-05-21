@@ -6,7 +6,7 @@
   --dark: #2c123c;
   --darkGreen: #3d4f0d;
   --lightGreen: #7fad47;
-  --greyish: #cec0d5;
+  --greyish: #d9cae0;
   --owlSize: 90px;
 
 }
@@ -70,10 +70,25 @@ body
   background-image: linear-gradient(var(--light),var(--greyish));
 }
 
-body > *
+body > * /*all direct children of body*/
 {
   padding: 40px;
   line-height: 1.5;
+}
+
+.segment h3
+{
+  font-size: 13px;
+}
+
+.main-work img
+{
+  height: 400px;
+  width: 600px;
+  border: solid;
+  border-color: var(--lightGreen);
+  border-radius: 30px;
+  
 }
 
 .footer
@@ -88,10 +103,10 @@ body > *
 {
   .header h1:after /*Smaller owl mascot*/
   {
-  
-    background-size: 60px;
-    height: 60px;
-    width: 60px;
+    --new-owl: 60px;
+    background-size: var(--new-owl);
+    height: var(--new-owl);
+    width: var(--new-owl);
     margin-top:  -20px; 
   
   }
