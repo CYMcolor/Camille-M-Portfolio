@@ -7,31 +7,56 @@
   --darkGreen: #3d4f0d;
   --lightGreen: #7fad47;
   --greyish: #cec0d5;
+  --owlSize: 90px;
 
 }
 
 *
 {
   color: var(--dark);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
 .header
 {
   background-image: linear-gradient(var(--mainColor),var(--light), var(--mainColor));
-  padding: 40px;
-  display: inline-flex;
+  padding: 40px; 
   width: 100%;
 
+}
+
+.header nav
+{
+
+  margin-right: 20px;
+  margin-top: 5px;
+  float: right;
+  
+}
+
+.header nav ul {
+  list-style-type: none;
+}
+
+.header nav ul li 
+{
+  display: inline-block;
+  margin-left: 25px;
+}
+
+a
+{
+  text-decoration: none;
 }
 
 .header h1:after /*The owl mascot*/
 {
   content: "";
   background-image: url("../images/owl-mascot.png");
-  background-size: 90px;
-  height: 90px;
-  width: 90px;
+  background-size: var(--owlSize);
+  height: var(--owlSize);
+  width: var(--owlSize);
   position: absolute;
   display: inline-block;
   margin-left: 20px;
@@ -42,7 +67,7 @@
 
 body
 {
-  background-image: linear-gradient(var(--light) 10%,var(--greyish) , var(--light) 90%);
+  background-image: linear-gradient(var(--light),var(--greyish));
 }
 
 body > *
@@ -51,8 +76,24 @@ body > *
   line-height: 1.5;
 }
 
-.about
+.footer
 {
-  padding: 40px;
-  line-height: 1.5;
+  background-image: linear-gradient(var(--mainColor),var(--light), var(--mainColor));
+}
+
+
+/* Screen size responsiveness code*/
+
+@media screen and (max-width: 768px) /*screen is less than 768*/
+{
+  .header h1:after /*Smaller owl mascot*/
+  {
+  
+    background-size: 60px;
+    height: 60px;
+    width: 60px;
+    margin-top:  -20px; 
+  
+  }
+  
 }
