@@ -7,7 +7,7 @@
   --darkGreen: #016e0c;
   --lightGreen: #7fad47;
   --greyish: #d9cae0;
-  --owlSize: 90px;
+  
 
 }
 
@@ -15,12 +15,19 @@
 {
   color: var(--dark);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
 }
 
 body > * /*all direct children of body*/
 {
   padding: 40px;
   line-height: 1.5;
+  
+}
+
+h2, h3
+{
+  padding: 5px 0 5px 0;
 }
 
 .header
@@ -52,7 +59,8 @@ body > * /*all direct children of body*/
 
 .header nav ul li :hover
 {
-  color: var(--darkGreen)
+  color: var(--darkGreen);
+  text-decoration: underline;
 }
 
 a
@@ -62,6 +70,7 @@ a
 
 .header h1:after /*The owl mascot*/
 {
+  --owlSize: 90px;
   content: "";
   background-image: url("../images/owl-mascot.png");
   background-size: var(--owlSize);
@@ -88,7 +97,7 @@ main
 
 .other-work
 {
-  display: flexbox;
+  display: block;
   flex-wrap: wrap;
   margin:  20px;
 }
@@ -97,10 +106,7 @@ main
 {
   height: 400px;
   width: 600px;
-  border: solid;
-  border-color: var(--lightGreen);
-  border-radius: 30px;
-  display: flexbox;
+  
 
 }
 
@@ -108,22 +114,35 @@ main
 {
   height: 200px;
   width: 300px;
+  
+}
+
+.card img
+{
   border: solid;
   border-color: var(--lightGreen);
   border-radius: 30px;
+
+}
+
+.card img:hover
+{
+  box-shadow: 0 0 10px var(--dark);
 }
 
 #contact ul li
 {
-  display: inline;
+  display:inline-flex;
   margin-right: 20px;
   padding-left: 5px;
   border-left: 5px solid var(--darkGreen);
+  
 }
 
 #contact ul li a:hover
 {
   color: var(--darkGreen);
+  text-decoration: underline;
 }
 
 .footer
@@ -171,7 +190,7 @@ main
 
 
 /*not avaible page*/
-.n-a
+.na
 {
   height: 100%;
   min-height: calc(100vh - 220px) 
