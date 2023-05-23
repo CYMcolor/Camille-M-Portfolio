@@ -7,7 +7,6 @@
   --darkGreen: #016e0c;
   --lightGreen: #7fad47;
   --greyish: #d9cae0;
-  
 
 }
 
@@ -17,6 +16,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   
 }
+
 
 body > * /*all direct children of body*/
 {
@@ -28,13 +28,29 @@ body > * /*all direct children of body*/
 h2, h3
 {
   padding: 5px 0 5px 0;
+  text-align: center;
 }
 
+p
+{
+   text-indent: 30px;
+   margin-bottom: 10px;
+}
+.segment
+{
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  
+}
 .header
 {
   background-image: linear-gradient(var(--mainColor),var(--light), var(--mainColor));
   padding: 40px; 
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  
 
 }
 
@@ -49,6 +65,7 @@ h2, h3
 
 .header nav ul {
   list-style-type: none;
+  display: flex;
 }
 
 .header nav ul li 
@@ -87,17 +104,39 @@ a
 main
 {
   background-image: linear-gradient(var(--light),var(--greyish));
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 10;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+main > *
+{
+  flex: 1;
+}
+h2
+{
+  font-size: 25px;
 }
 
-
-.segment h3
+h3
 {
-  font-size: 13px;
+  font-size: 17px;
+}
+
+.boxes
+{
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .other-work
 {
-  display: block;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin:  20px;
 }
@@ -117,12 +156,24 @@ main
   
 }
 
+.card
+{
+  padding: 10px;
+  text-align: center;
+  
+}
+
 .card img
 {
   border: solid;
-  border-color: var(--lightGreen);
+  border: 5px solid var(--lightGreen);
   border-radius: 30px;
-
+  width: 100%;
+}
+.img-wrapper
+{
+  min-width: 30rem;
+  padding: 1rem;
 }
 
 .card img:hover
@@ -130,6 +181,10 @@ main
   box-shadow: 0 0 10px var(--dark);
 }
 
+#contact h3
+{
+  text-align: left;
+}
 #contact ul li
 {
   display:inline-flex;
@@ -149,7 +204,7 @@ main
 {
   background-image: linear-gradient(var(--mainColor),var(--light), var(--mainColor));
   padding: 10px; 
-  width: 100%;
+  
 }
 
 #signature
@@ -165,6 +220,7 @@ main
   width: 20px;
   transform: rotate(45deg);
   margin-top: -10px;
+  
 }
 /* Screen size responsiveness code*/
 
@@ -179,14 +235,29 @@ main
     margin-top:  -20px; 
   
   }
-  
-  .main-work
+
+ .card
+ {
+    height:60%;
+    width:60%;
+ }
+  .card img
   {
-    height: 50%;
-    width: 50%;
+   height:60%;
+    width:60%;
   }
   
+  
 }
+
+
+
+
+
+
+
+
+
 
 
 /*not avaible page*/
