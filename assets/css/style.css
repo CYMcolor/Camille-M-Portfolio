@@ -8,13 +8,14 @@
   --lightGreen: #7fad47;
   --greyish: #d9cae0;
   
+
 }
 
 *
 {
   color: var(--dark);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
+  word-wrap: break-word;
 }
 
 body > * /*all direct children of body*/
@@ -27,6 +28,23 @@ body > * /*all direct children of body*/
 h2, h3
 {
   padding: 5px 0 5px 0;
+  text-align: center;
+}
+
+h2
+{
+  font-size: 25px;
+}
+
+h3
+{
+  font-size: 20;
+}
+
+p
+{
+   text-indent: 30px;
+   margin-bottom: 10px;
 }
 
 .header
@@ -89,23 +107,18 @@ main
 }
 
 
-.segment h3
+.boxes
 {
-  font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.other-work
-{
-  display: block;
-  flex-wrap: wrap;
-  margin:  20px;
-}
 
 .main-work img
 {
   height: 400px;
   width: 600px;
-  
 
 }
 
@@ -116,10 +129,17 @@ main
   
 }
 
+.card
+{
+  display: flex;
+  flex-direction: column;
+  margin:  20px;
+  text-align: center;
+}
+
 .card img
 {
-  border: solid;
-  border-color: var(--lightGreen);
+  border: 5px solid var(--lightGreen);
   border-radius: 30px;
 
 }
@@ -129,12 +149,19 @@ main
   box-shadow: 0 0 10px var(--dark);
 }
 
+#contact h2
+{
+  text-align: left;
+  font-size: 15px;
+}
+
 #contact ul li
 {
   display:inline-flex;
   margin-right: 20px;
   padding-left: 5px;
   border-left: 5px solid var(--darkGreen);
+  margin-bottom: 10px;
   
 }
 
@@ -149,6 +176,7 @@ main
   background-image: linear-gradient(var(--mainColor),var(--light), var(--mainColor));
   padding: 10px; 
   width: 100%;
+  
 }
 
 #signature
@@ -169,6 +197,11 @@ main
 
 @media screen and (max-width: 768px) /*screen is less than 768*/
 {
+  main, header
+  {
+    font-size: 80%;
+  }
+
   .header h1:after /*Smaller owl mascot*/
   {
     --new-owl: 60px;
@@ -179,13 +212,25 @@ main
   
   }
   
-  .main-work
+  .card
   {
-    height: 50%;
-    width: 50%;
+    height: 80%;
+    width: 80%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .card img
+  {
+    border: 2px solid var(--lightGreen);
+    height: 90%;
+    width: 90%;
   }
   
 }
+
 
 
 /*not avaible page*/
