@@ -1,4 +1,4 @@
-# Mod2-HW-CYM-Portfolio
+# Camille-M-Portfolio
 
 ## Description
 
@@ -14,6 +14,8 @@ The calculator and testing will go to a not available page.
 
 The contact page has two links that will go to github and linkedin respectively.
 
+
+This was homework 2 from a bootcamp.
 
 
 ## License
