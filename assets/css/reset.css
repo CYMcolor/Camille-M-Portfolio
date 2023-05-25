@@ -8,8 +8,7 @@
 html 
 {
     /*makes it so that the html spans for the whole viewport of screen*/
-    height: 100%;
-    
+    height: 100%; 
 }
 
 body 

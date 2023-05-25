@@ -7,11 +7,9 @@
   --darkGreen: #016e0c;
   --lightGreen: #7fad47;
   --greyish: #d9cae0;
-  
-
 }
 
-*
+* /*universal selector*/
 {
   color: var(--dark);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -21,8 +19,7 @@
 body > * /*all direct children of body*/
 {
   padding: 40px;
-  line-height: 1.5;
-  
+  line-height: 1.5;  
 }
 
 h2, h3
@@ -45,6 +42,8 @@ p
 {
    text-indent: 30px;
    margin-bottom: 10px;
+   padding-right: 40px;
+   padding-left: 40px;
 }
 
 .header
@@ -80,6 +79,12 @@ p
   text-decoration: underline;
 }
 
+p
+{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 a
 {
   text-decoration: none;
@@ -104,6 +109,7 @@ a
 main
 {
   background-image: linear-gradient(var(--light),var(--greyish));
+  padding: 40px;
 }
 
 
@@ -141,7 +147,6 @@ main
 {
   border: 5px solid var(--lightGreen);
   border-radius: 30px;
-
 }
 
 .card img:hover
@@ -161,8 +166,7 @@ main
   margin-right: 20px;
   padding-left: 5px;
   border-left: 5px solid var(--darkGreen);
-  margin-bottom: 10px;
-  
+  margin-bottom: 10px; 
 }
 
 #contact ul li a:hover
@@ -176,20 +180,18 @@ main
   background-image: linear-gradient(var(--mainColor),var(--light), var(--mainColor));
   padding: 10px; 
   width: 100%;
-  
 }
 
 #signature
 {
-  height: 60px;
-  width: 250px;
-  
+  max-height: 60px;
+  max-width: 250px;
 }
 
 #feather
 {
-  height: 85px;
-  width: 20px;
+  max-height: 85px;
+  max-width: 20px;
   transform: rotate(45deg);
   margin-top: -10px;
 }
@@ -199,9 +201,19 @@ main
 {
   main, header
   {
-    font-size: 80%;
+    font-size: 75%;
   }
 
+  main
+  {
+    padding: 10px;
+  }
+
+  p
+  {
+    padding: 10px;
+  }
+  
   .header h1:after /*Smaller owl mascot*/
   {
     --new-owl: 60px;
@@ -224,13 +236,18 @@ main
   }
   .card img
   {
-    border: 2px solid var(--lightGreen);
+    border: 3px solid var(--lightGreen);
     height: 90%;
     width: 90%;
   }
+
+  #signature, #feather
+  {
+    height: 70%;
+    width: 70%;
+  }
   
 }
-
 
 
 /*not avaible page*/
@@ -239,8 +256,21 @@ main
   height: 100%;
   min-height: calc(100vh - 220px) 
 }
+.na h2
+{
+  text-align: left;
+}
+
 #owl-shock
 {
   height: 200px;
   width: 200px;
+}
+@media screen and (max-width: 768px) /*screen is less than 768*/
+{
+  #owl-shock
+  {
+    height: 50%;
+    width: 50%;
+  }
 }
