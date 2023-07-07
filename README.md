@@ -1,4 +1,4 @@
-# Mod2-HW-CYM-Portfolio
+# Camille-M-Portfolio
 
 ## Description
 
@@ -15,6 +15,8 @@ The calculator and testing will go to a not available page.
 The contact page has two links that will go to github and linkedin respectively.
 
 
+This was homework 2 from a bootcamp.
+
 
 ## License
 
@@ -24,6 +26,4 @@ Please refer to the LICENSE in the repo.
 ## Link/Screentshot
 
 https://cymcolor.github.io/Camille-M-Portfolio/
-
-
 ![mod2hwscreenshot.](./assets/images/mod2hwscreenshot.PNG)
